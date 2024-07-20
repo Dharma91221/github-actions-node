@@ -1,0 +1,27 @@
+name: NodeJS Github Action
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4 # checkout repo available
+    - name: use Node
+
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Install depedencies
+      run: npm install
+    - name: Run test
+      run: npm test
+
+
+
+    
+    
+
+
